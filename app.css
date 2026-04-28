@@ -1,0 +1,128 @@
+/*PARALLAX*/
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+.parallax_layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.parallax_group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+.back {
+    transform: translateZ(-1px) scale(2) translate(-4px, 0);
+}
+.front {
+    transform: translateZ(0px);
+    margin-top: 84vh;
+}
+/*GENERAL*/
+:root {
+    --bg: black;
+    --cl: rgba(0, 0, 0, 0.5);
+    --fg: white;
+}
+body{
+    background-color: var(--bg);
+    margin: 0;
+    overflow-x: hidden;
+}
+/*TOP*/
+.hero {
+    display: block;
+    posistion: relative;
+    width: 100%;
+    height: minmax(250px, 100vh);
+    background-size: cover;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem 0 2rem 2rem;
+    margin: 0;
+    color: var(--fg);
+    background-color: var(--cl)
+}
+/*ME*/
+.me {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    height: 300px;
+    justify-items: center;
+    align-items: center;
+    padding: 0 3rem;
+    background-color: var(--bg);
+}
+p {
+    position: relative;
+    color: white;
+}
+.headshot {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/*Gallery*/
+.gallery {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: .5rem;
+    width: 100%;
+    background-color: var(--bg);
+}
+.gal-img {
+    flex-grow: 1;
+    width: 15%;
+    height: auto;
+    object-fit: cover;
+}
+.landscape {
+    width: 30%;
+}
+/*INFO8*/
+.info {
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 1rem;
+}
+a {
+    color: white;
+}
+a:hover {
+    color: rgb(180, 180, 180);
+}
+/*RESPONSIVE*/
+
+@media (max-width: 750px) {
+    .gal-img {
+        width: 45%;
+    }
+    .landscape {
+        width: 100%;
+    }
+    .front {
+        margin-top: 70%;
+    }
+    
+}

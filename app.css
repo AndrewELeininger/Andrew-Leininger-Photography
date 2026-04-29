@@ -60,7 +60,9 @@ h1 {
     text-transform: uppercase;
     font-size: 6vh;
     color: var(--fg);
-    left: 3rem;
+    padding-left: 3rem;
+    width: 100%;
+    height: 100%;
 }
 /*ME*/
 .me {

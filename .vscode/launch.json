@@ -5,10 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type":"editor-browser",
+            "type":"firefox",
             "request": "launch",
             "name": "Open index.html",
-            "url": "file:///c%3A/Users/leininger%20household/Documents/websites/portfolio/index.html"
+            "url": "file:///c%3A/Users/leini/Desktop/portfolio/index.html"
+            //"url": "file:///c%3A/Users/leininger%20household/Documents/websites/portfolio/index.html"
         }
     ]
 }

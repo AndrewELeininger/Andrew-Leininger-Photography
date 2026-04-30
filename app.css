@@ -129,7 +129,7 @@ a:hover {
     }
     .me {
         height: 200px;
-        grid-template-columns: repeat(2, 200px);
+        grid-template-columns: repeat(2, 190px);
         padding: 1rem;
     }
     .headshot {

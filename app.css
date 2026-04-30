@@ -125,7 +125,7 @@ a:hover {
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 4vh;
-        left: 1rem;
+        padding-left: 1rem;
     }
     .me {
         height: 200px;

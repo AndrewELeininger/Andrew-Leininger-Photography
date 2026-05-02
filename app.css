@@ -1,0 +1,155 @@
+/*PARALLAX*/
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+.parallax_layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.parallax_group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+.back {
+    transform: translateZ(-1px) scale(2) translate(-4px, 0);
+}
+.front {
+    transform: translateZ(0px);
+    margin-top: 0vh;
+}
+/*GENERAL*/
+:root {
+    --bg: rgb(22, 18, 18);
+    --cl: rgba(0, 0, 0, 0.25);
+    --fg: rgb(255, 228, 228);
+}
+body{
+    background-color: var(--bg);
+    margin: 0;
+    overflow-x: hidden;
+}
+p {
+    font-size: .85rem;
+    color: var(--fg);
+}
+/*TOP*/
+.hero {
+    display: block;
+    posistion: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(landscapeHero.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--cl)
+}
+.logo {
+    position: absolute;    
+    width: 250px;
+    height: 250px;
+}
+.menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 35px;
+    height: 35px;
+
+}
+/*ME*/
+.me {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: var(--bg);
+}
+.intro {
+    font-size: 1.2rem;
+}
+.headshot {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/*Gallery*/
+.gallery {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: .5rem;
+    width: 100%;
+    background-color: var(--bg);
+}
+.gal-img {
+    flex-grow: 1;
+    width: 15%;
+    height: auto;
+    object-fit: cover;
+}
+.landscape {
+    width: 30%;
+}
+/*INFO8*/
+.info {
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 1rem;
+}
+a {
+    font-size: .85rem;
+    color: var(--fg);
+}
+a:hover {
+    color: rgb(180, 180, 180);
+}
+/*RESPONSIVE*/
+
+@media screen and (max-width: 768px) {
+    .hero {
+        background-image: url(portraitHero.jpg);
+    }
+    .logo {
+        width: 175px;
+        height: 175px;
+    }
+    .me {
+        height: 200px;
+        grid-template-columns: repeat(2, 190px);
+        padding: 1rem;
+    }
+    .headshot {
+        width: 150px;
+        height: 150px;
+    }
+    .gal-img {
+        width: 45%;
+    }
+    .landscape {
+        width: 100%;
+    }
+}

@@ -28,8 +28,9 @@
 /*GENERAL*/
 :root {
     --bg: rgb(22, 18, 18);
+    --fg: rgb(255, 228, 228);    
     --cl: rgba(0, 0, 0, 0.25);
-    --fg: rgb(255, 228, 228);
+    --ac: rgb(200, 255, 0);
 }
 body{
     background-color: var(--bg);
@@ -50,7 +51,7 @@ p {
     background-size: cover;
     background-position: center;
 }
-.top {
+.home {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,31 +70,39 @@ p {
     left: 1rem;
     width: 35px;
     height: 35px;
-    opacity: 75%;
-    transition: opacity ease-in-out .2s;
+    filter: brightness(90%);
+    transition: all ease-in-out .1s;
 }
 #menubtn:hover {
-    opacity: 100%;
+    filter: brightness(100%);
 }
-.menu {
+#menu {
     position: fixed;
     list-style: none;
     top: 3rem;
-    left: 1rem;
+    left: -7rem;
     background-color: var(--cl);
+    backdrop-filter: blur(5px);
     padding: .5rem;
     border-radius: .5rem;
     list-style: none;
-
+    transition: all ease-in-out .2s;
 }
-.menu li {
+#menu.show {
+    transform: translateX(8rem);
+}
+li {
     color: var(--fg);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-transform: capitalize;
-    margin: .5rem .25rem;
+    margin: 1rem .25rem;
+    transition: all ease-in-out .1s;
+}
+li:hover {
+    filter: brightness(125%);
 }
 /*ME*/
-.me {
+.about {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 300px);
@@ -132,7 +141,7 @@ p {
     width: 30%;
 }
 /*INFO8*/
-.info {
+.contact {
     position: relative;
     width: 100%;
     display: flex;
@@ -158,7 +167,7 @@ a:hover {
         width: 250px;
         height: 250px;
     }
-    .me {
+    .about {
         height: 200px;
         grid-template-columns: repeat(2, 190px);
         padding: 1rem;

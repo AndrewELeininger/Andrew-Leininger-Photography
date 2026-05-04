@@ -16,11 +16,11 @@
                 </div>
 
                 <div class="parallax_layer front">
-                    <div class="top">
+                    <div class="home">
                         <img src="logo.svg" class="logo">
                     </div>
                     
-                    <div class="me">
+                    <div class="about">
                         <p class="intro">My name is Andrew Leininger. Welcome to my website.</p>  
                         <img class="headshot" src="headshot.jpg">                                              
                     </div>
@@ -61,7 +61,7 @@
                         <!--<img class="gal-img" src="portrait (2).jpg">-->
 
                     </div>
-                    <div class="info">
+                    <div class="contact">
                         <p>andreweleininger@gmail.com</p>
                         <a href="https://www.facebook.com/profile.php?id=61583798572752">facebook</a>
                         <a href="https://www.instagram.com/_andrew_e_l/">Instagram</a>
@@ -70,11 +70,11 @@
 
             </div>
         </div>
-        <img src="menu.svg" id="menubtn">
-        <ul class="menu">
-            <li>home</li>
-            <li>about</li>
-            <li>contact</li>
+        <img src="menu.svg" id="menubtn" onclick="menutoggle()">
+        <ul id="menu">
+            <li onclick="home()">home</li>
+            <li onclick="about()">about</li>
+            <li onclick="contact()">contact</li>
         </ul>
 
     </body>

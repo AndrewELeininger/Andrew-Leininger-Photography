@@ -38,7 +38,7 @@ body{
     overflow-x: hidden;
 }
 p {
-    font-size: .85rem;
+    font-size: 1rem;
     color: var(--fg);
 }
 /*TOP*/
@@ -57,7 +57,7 @@ p {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: var(--cl)
+    background-color: var(--cl);
 }
 .logo {
     position: absolute;    
@@ -65,16 +65,23 @@ p {
     height: 350px;
 }
 #menubtn {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
     position: fixed;
     top: 1rem;
     left: 1rem;
     width: 35px;
     height: 35px;
-    filter: brightness(90%);
-    transition: all ease-in-out .1s;
+    transition: all ease-in-out .2s;    
 }
 #menubtn:hover {
-    filter: brightness(100%);
+}
+.line{
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background-color: white;
 }
 #menu {
     position: fixed;
@@ -82,7 +89,7 @@ p {
     top: 3rem;
     left: -7rem;
     background-color: var(--cl);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(4px);
     padding: .5rem;
     border-radius: .5rem;
     list-style: none;
@@ -95,11 +102,11 @@ li {
     color: var(--fg);
     font-size: 1.5rem;
     text-transform: capitalize;
-    margin: 1rem .25rem;
-    transition: all ease-in-out .1s;
+    margin: 1rem .5rem;
+    transition: all ease-in-out .2s;
 }
 li:hover {
-    filter: brightness(125%);
+
 }
 /*ME*/
 .about {
@@ -151,7 +158,8 @@ li:hover {
     padding: 0 1rem;
 }
 a {
-    font-size: .85rem;
+    font-size: 1rem;
+    text-decoration: none;
     color: var(--fg);
 }
 a:hover {
@@ -160,6 +168,12 @@ a:hover {
 /*RESPONSIVE*/
 
 @media screen and (max-width: 768px) {
+    p {
+        font-size: .9rem;
+    }
+    a {
+        font-size: .9rem;
+    }
     .hero {
         background-image: url(portraitHero.jpg);
     }

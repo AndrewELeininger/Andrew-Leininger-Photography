@@ -6,13 +6,16 @@ function menutoggle() {
 function home() {
     const home = document.querySelector('.home');
     home.scrollIntoView({ behavior: 'smooth' });
+    menutoggle();
 };
 function about() {
     const about = document.querySelector('.about');
-    about.scrollIntoView({ behavior: 'smooth' });    
+    about.scrollIntoView({ behavior: 'smooth' });  
+    menutoggle();  
 };
 function contact() {
     const contact = document.querySelector('.contact');
     contact.scrollIntoView({ behavior: 'smooth' });
+    menutoggle();
 };
 

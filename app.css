@@ -40,6 +40,7 @@ body{
 p {
     font-size: 1rem;
     color: var(--fg);
+    margin: .5rem;
 }
 /*TOP*/
 .hero {
@@ -152,15 +153,16 @@ li:hover {
     position: relative;
     width: 100%;
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 1rem;
+    padding: 1rem;
 }
 a {
     font-size: 1rem;
     text-decoration: none;
     color: var(--fg);
+    margin: .5rem;
 }
 a:hover {
     color: rgb(180, 180, 180);
@@ -168,12 +170,6 @@ a:hover {
 /*RESPONSIVE*/
 
 @media screen and (max-width: 768px) {
-    p {
-        font-size: .9rem;
-    }
-    a {
-        font-size: .9rem;
-    }
     .hero {
         background-image: url(portraitHero.jpg);
     }
@@ -182,8 +178,8 @@ a:hover {
         height: 250px;
     }
     .about {
-        height: 200px;
         grid-template-columns: repeat(2, 190px);
+        height: 200px;
         padding: 1rem;
     }
     .headshot {
